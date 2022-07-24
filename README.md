@@ -1,4 +1,4 @@
-*This project is not actively maintained.*
+*This repository is the fork of [memononen/nanovg](https://github.com/memononen/nanovg)*
 
 NanoVG
 ==========

@@ -321,6 +321,12 @@ void nvgScale(NVGcontext* ctx, float x, float y);
 // There should be space for 6 floats in the return buffer for the values a-f.
 void nvgCurrentTransform(NVGcontext* ctx, float* xform);
 
+// Sets the top part (a-f) of the current transformation matrix with the values from specified buffer.
+//   [a c e]
+//   [b d f]
+//   [0 0 1]
+// There should be 6 floats in the buffer for the values a-f.
+void nvgSetTransform(NVGcontext* ctx, const float* xform);
 
 // The following functions can be used to make calculations on 2x3 transformation matrices.
 // A 2x3 matrix is represented as float[6].
@@ -486,6 +492,12 @@ void nvgPathWinding(NVGcontext* ctx, int dir);
 // and the arc is drawn from angle a0 to a1, and swept in direction dir (NVG_CCW, or NVG_CW).
 // Angles are specified in radians.
 void nvgArc(NVGcontext* ctx, float cx, float cy, float r, float a0, float a1, int dir);
+
+// Creates new oval arc shaped sub-path. The arc center is at cx,cy, the arc horizontal radius is w,
+// the arc vertical radius is h,
+// and the arc is drawn from angle a0 to a1, and swept in direction dir (NVG_CCW, or NVG_CW).
+// Angles are specified in radians.
+void nvgArcWH(NVGcontext* ctx, float cx, float cy, float w, float h, float a0, float a1, int dir);
 
 // Creates new rectangle shaped sub-path.
 void nvgRect(NVGcontext* ctx, float x, float y, float w, float h);
