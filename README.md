@@ -1,5 +1,9 @@
 *This repository is the fork of [memononen/nanovg](https://github.com/memononen/nanovg)*
 
+List of changes:
+- **nvgSetTransform** - sets the transform matrix
+- **nvgArcWH** - creates new oval arc shaped sub-path
+
 NanoVG
 ==========
 
